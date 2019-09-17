@@ -1,6 +1,6 @@
 var start = Date.now();
 var hour = Date.now() - 86400000;
-let markets = [
+let marketCode = [
   "BTC-USD",
   "ETH-USD",
   "LSK-USD",
@@ -9,7 +9,7 @@ let markets = [
   "DASH-USD"
 ];
 
-let requests = markets.map(market =>
+let requests = marketCode.map(name =>
   fetch(
     `https://api.bitbay.net/rest/trading/candle/history/${name}/900?from=${hour}&to=${start}`
   )
@@ -17,9 +17,12 @@ let requests = markets.map(market =>
 
 Promise.all(requests)
   .then(responses => {
+    // all responses are resolved successfully
     return responses;
   })
+  // map array of responses into array of response.json() to read their content
   .then(responses => Promise.all(responses.map(r => r.json())))
+  // all JSON answers are parsed: "users" is the array of them
   .then(markets => markets.forEach(market => findValues(market.items)));
 
 function findValues(arr) {

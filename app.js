@@ -1,6 +1,6 @@
 const apiCall = () => {
   const request = new Request(
-    "https://api.bitbay.net/rest/trading/ticker/ALG-BTC",
+    "https://api.bitbay.net/rest/trading/orderbook/BTC-USD",
     {
       method: "GET",
       headers: { "content-type": "application/json" }
@@ -16,15 +16,15 @@ const apiCall = () => {
       }
     })
     .then(response => {
-      console.log(response);
       createElement(
-        "Kod marketu: " +
-          response.ticker.market.code +
+        "Kod marketu: BTC-USD" +
           "<br>" +
-          "Highest bid: " +
-          response.ticker.highestBid +
-          "<br>Lowest ask: " +
-          response.ticker.lowestAsk
+          "Best sell offer: " +
+          response.sell[0].ra +
+          "$" +
+          "<br>Best buy offer: " +
+          response.buy[0].ra +
+          "$"
       );
     })
     .catch(error => {

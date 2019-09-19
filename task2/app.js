@@ -22,7 +22,6 @@ Promise.all(requests)
   })
   // map array of responses into array of response.json() to read their content
   .then(responses => Promise.all(responses.map(r => r.json())))
-  // all JSON answers are parsed: "users" is the array of them
   .then(markets => markets.forEach(market => findValues(market.items)));
 
 function findValues(arr) {

@@ -13,6 +13,6 @@ Promise.all(requests)
 const createElement = (name, highestValue, lowestValue) =>
 {
   $("#values").append("Nazwa: " + name + "<br>", 
-  "Najwyższa wartość: " + highestValue + "<br>", 
-  "Najniższa wartość: " + lowestValue + "<br>");
+  "Najwyższa wartość: " + highestValue + "$" + "<br>", 
+  "Najniższa wartość: " + lowestValue +  "$" +"<br>");
 }

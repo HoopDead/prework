@@ -1,0 +1,98 @@
+/* Sections */
+
+#login-section
+{
+    width: 100vw;
+    height: 100vh;
+    background: #4375C5 0% 0% no-repeat padding-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Static elements */
+
+hr
+{
+    opacity: 0.6;
+    border-top: 1px solid #a59a9a;
+    margin: 0;
+    width: 10%;
+}
+
+:root {
+    --info-color: #0099CC;
+  }
+  
+  .btn-toggle-pass {
+    border: none;
+    position: absolute;
+    top: 11px;
+    background: transparent;
+    right: 0;
+  }
+  
+  .btn-toggle-pass.active {
+    color: var(--info-color);
+  }
+
+
+/* Login section */
+
+#login-box
+{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 25px 25px 10px #00000029;
+    border: 1px solid #707070;
+    padding: 2.5em 6.5em;
+}
+
+#login-welcome
+{
+    color: #707070;
+}
+
+#login-button
+{
+    align: auto;
+    width: 100%;
+    background-color: #FF6565;
+    color: white;
+}
+
+#login-facebook-button
+{
+    align: auto;
+    width: 100%;
+    background-color: #175BA8;
+    color: white;
+}
+
+#login-signup
+{
+    color: #707070;
+}
+
+.line
+{
+    width: 41%;
+    border-top: 1px solid #707070;
+}
+
+#or
+{
+    margin-left: 15px;
+    font-size: 12px;
+}
+
+
+
+
+@media (max-width: 425px)
+{
+    #login-box
+{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 25px 25px 10px #00000029;
+    border: 1px solid #707070;
+    padding: 2.5em 2em;
+}
+}

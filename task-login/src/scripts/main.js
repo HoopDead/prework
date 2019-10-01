@@ -60,8 +60,6 @@
     $('.password-custom').togglePassword({
         'icon': 'fa-lock'
     });
-  $("#register-section").css("display", "block");
-  $("#login-section").css("display", "none");
   })
 
 
@@ -69,3 +67,8 @@ $("#login-signup").click(function(){
   $("#register-section").css("display", "block");
   $("#login-section").css("display", "none");
 });
+
+$("#register-cancel").click(function() {
+  $("#register-section").css("display", "none");
+  $("#login-section").css("display", "block");
+})

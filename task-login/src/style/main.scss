@@ -149,7 +149,6 @@ hr
     background: #EBE9E9 0% 0% no-repeat padding-box;
     padding: 1.8rem;
     width: 100%;
-    margin-left: 5%;
 }
 
 #register-rules-para
@@ -184,11 +183,6 @@ hr
     color: #fff;
 }
 
-#register-buttons
-{
-    margin-left: 3%;
-}
-
 @media (max-width: 770px)
 {
     
@@ -200,7 +194,7 @@ hr
     }
     #register-welcome
     {
-        margin-top: 15%;
+        display: none;
     }
 
     #register-box
@@ -212,21 +206,5 @@ hr
     #register-input
     {
         margin-top: 20%;
-    }
-}
-
-@media (max-width: 700px)
-{
-    #register-welcome
-    {
-        margin-top: 15rem;
-    }
-}
-
-@media (max-width: 320px)
-{
-    #register-welcome
-    {
-        margin-top: 15rem;
     }
 }

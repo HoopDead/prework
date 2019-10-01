@@ -56,8 +56,16 @@
   })(jQuery);
   
   $(document).ready(function() {
-    $('#password').togglePassword();
-    $('#password-custom').togglePassword({
+    $('.password').togglePassword();
+    $('.password-custom').togglePassword({
         'icon': 'fa-lock'
     });
+  $("#register-section").css("display", "block");
+  $("#login-section").css("display", "none");
   })
+
+
+$("#login-signup").click(function(){
+  $("#register-section").css("display", "block");
+  $("#login-section").css("display", "none");
+});

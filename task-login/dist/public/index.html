@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Webpack Project</title>
+    <link rel="stylesheet" href="main.bundle.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <!-- update the version number as needed -->        </head>
+
+<body>
+    <section id = "login-section">
+        <div class = "flex-center flex-column">
+            <div id = "login-box">
+                <h1 class = "text-center mt-3" id = "login-welcome">Welcome</h1>
+                <div class="md-form mt-5">
+                    <i class="fas fa-user-circle prefix"></i>
+                    <input type="text" id="form2" class="form-control">
+                    <label for="form2">Username</label>
+                </div>
+                <div class="md-form mt-5">
+                    <i class = "fas fa-lock prefix"></i>
+                    <input type="password" id="password" class="form-control password">
+                    <label for="password">Password</label>
+                </div>
+                <button type="button" class="btn btn-md text-center mt-5" id = "login-button">Log in</button>
+                <div class = "row mx-auto text-center mt-4">
+                    <div class = "line my-auto"></div>
+                    <p class = "my-auto" id = "or">OR</p>
+                    <div class = "line ml-auto my-auto"></div>
+                </div>
+                <button type="button" class="btn btn-md text-center mt-4" id = "login-facebook-button">Log in with Facebook</button>
+                <p class = "mt-4" id = "login-signup"><em><a>Don't have a account? Sign up!</a></em></p>
+            </div>
+        </div>
+    </section>
+
+    <section id = "register-section">
+        <div class = "flex-center flex-column">
+            <div id = "register-box">
+                <div class = "col-sm-12 mt-5">
+                    <h1 class = "text-center" id = "register-welcome">Join with your email address!</h1>
+                </div>
+                <div class = "row mt-5" id = "register-input">
+                    <div id = "block" class = "mx-auto text-center"><i id = "block-mail" class="fas fa-envelope"></i></div>
+                    <div class = "col-sm-12 col-lg-4">
+                        <div class="md-form mt-2">
+                            <i class="fas fa-user-circle prefix"></i>
+                            <input type="text" id="form5" class="form-control">
+                            <label for="form5">Username</label>
+                        </div>
+                        <div class="md-form mt-2">
+                            <i class="fas fa-lock prefix"></i>
+                            <input type="text" id="form6" class="form-control password">
+                            <label for="form6">Password</label>
+                        </div>
+                    </div>
+                    <div class = "col-sm-12 col-lg-4">
+                        <div class="md-form mt-2">
+                            <i class="fas fa-envelope prefix"></i>
+                            <input type="text" id="form7" class="form-control">
+                            <label for="form7">Email Address</label>
+                        </div>
+                        <div class="md-form mt-2">
+                            <i class="fas fa-heart prefix"></i>
+                            <input type="text" id="form8" class="form-control">
+                            <label for="form8">Name</label>
+                        </div>
+                    </div>
+                </div>
+                <div class = "col-sm-12 mx-auto mt-5 text-center">
+                    <div id = "register-rules">
+                        <div class = "row">
+                            <p id = "register-rules-para">I acknowledge that i have read and accept the Therms of Use Agreement and consent to the Privacy Policy
+                            <div class="custom-control custom-checkbox mx-auto">
+                                <input type="checkbox" class="custom-control-input" id="defaultChecked2">
+                                <label class="custom-control-label" for="defaultChecked2"></label>
+                            </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class = "row mt-5 mb-3" id = "register-buttons">
+                    <div class = "col-sm-12 col-md-6 text-center mx-auto">
+                        <button type="button" class="btn btn-md text-center" id = "register-cancel">Cancel</button>
+                    </div>
+                    <div class = "col-sm-12 col-md-6 text-center mx-auto">
+                        <button type="button" class="btn btn-md text-center" id = "register-button">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script>
+        var firebaseConfig = {
+        apiKey: "AIzaSyC_j0j2yxyPkUGqgkdz3gn1EQ9rKJKaQCk",
+        authDomain: "crypto-login-1927a.firebaseapp.com",
+        databaseURL: "https://crypto-login-1927a.firebaseio.com",
+        projectId: "crypto-login-1927a",
+        storageBucket: "crypto-login-1927a.appspot.com",
+        messagingSenderId: "930597089578",
+        appId: "1:930597089578:web:9d8901628d703921586e53"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="main.bundle.js"></script>
+</body>
+
+</html>
